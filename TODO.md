@@ -9,5 +9,5 @@
  - Look at Git Tags
  - data modelling
  - how will client & server handler communicate (gRPC web?)
- - update envoy
  - Lookup Up docker issue: "Error response from daemon: i/o timeout"
+ - Re add .pb.go files via copy command
