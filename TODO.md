@@ -10,4 +10,6 @@
  - data modelling
  - how will client & server handler communicate (gRPC web?)
  - Lookup Up docker issue: "Error response from daemon: i/o timeout"
- - Re add .pb.go files via copy command
+ - ~~Re add .pb.go files via copy command~~
+ - Revist the config files expand & add defaults
+ - Get Config via ENV??

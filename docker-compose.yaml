@@ -14,6 +14,8 @@ services:
       dockerfile: Dockerfile
       args:
         EXEC_APP_NAME: engine
+    environment:
+      HABITS_NATS.CONNECTION_STRING: nats://nats-server:4222
     volumes:
     - ./mounts/data:/app/data
     - ./backend/config:/app/config
@@ -36,8 +38,8 @@ services:
 
   nats-server:
     image: nats
-    ports:
-      - "4222:4222"
-      - "8222:8222"
+    # ports:
+    #   - "4222:4222"
+    #   - "8222:8222"
     logging:
       driver: none # disable logging
