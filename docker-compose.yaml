@@ -15,10 +15,11 @@ services:
       args:
         EXEC_APP_NAME: engine
     environment:
+      # HABITS_CONFIG_FILE: config/engine.toml
       HABITS_NATS.CONNECTION_STRING: nats://nats-server:4222
     volumes:
+    - ./backend/config/engine.toml:/app/config.toml
     - ./mounts/data:/app/data
-    - ./backend/config:/app/config
     depends_on:
       - nats-server
 
@@ -30,8 +31,11 @@ services:
         EXEC_APP_NAME: handler
     ports:
       - "8080:8080"
+    environment:
+      # HABITS_CONFIG_FILE: config/handler.toml
+      HABITS_NATS.CONNECTION_STRING: nats://nats-server:4222
     volumes:
-      - ./backend/config:/app/config
+      - ./backend/config/handler.toml:/app/config.toml
     depends_on:
       - engine
       - nats-server

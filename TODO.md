@@ -12,4 +12,5 @@
  - Lookup Up docker issue: "Error response from daemon: i/o timeout"
  - ~~Re add .pb.go files via copy command~~
  - Revist the config files expand & add defaults
- - Get Config via ENV??
+ - ~~Get Config via ENV??~~
+ - Add Distributors
